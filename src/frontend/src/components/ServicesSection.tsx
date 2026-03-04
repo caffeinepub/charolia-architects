@@ -12,7 +12,7 @@ const SERVICES = [
       "Custom Home Design",
       "Commercial Architecture",
     ],
-    image: "/assets/uploads/Screenshot_20260305-005928-5.png",
+    image: "/assets/Screenshot_20260305-005928.png",
   },
   {
     icon: Palette,
@@ -24,7 +24,7 @@ const SERVICES = [
       "Modular Kitchens & Bedrooms",
       "Renovation & Refurbishment",
     ],
-    image: "/assets/uploads/Screenshot_20260305-005919-4.png",
+    image: "/assets/Screenshot_20260305-005919.png",
   },
   {
     icon: Trees,
@@ -36,7 +36,7 @@ const SERVICES = [
       "End-to-End Project Oversight",
       "Construction Management",
     ],
-    image: "/assets/uploads/Screenshot_20260305-005853-6.png",
+    image: "/assets/Screenshot_20260305-005853.png",
   },
 ];
 

@@ -6,36 +6,12 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { useActor } from "./hooks/useActor";
-import { useSeedInitialData } from "./hooks/useQueries";
 import AdminPage from "./pages/AdminPage";
 import HomePage from "./pages/HomePage";
-
-function SeedInitializer() {
-  const { actor, isFetching } = useActor();
-  const seedMutation = useSeedInitialData();
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: seedMutation is intentionally excluded to prevent infinite loops
-  useEffect(() => {
-    if (!actor || isFetching) return;
-    const seeded = localStorage.getItem("charoliaSeeded");
-    if (!seeded) {
-      seedMutation.mutate(undefined, {
-        onSuccess: () => {
-          localStorage.setItem("charoliaSeeded", "true");
-        },
-      });
-    }
-  }, [actor, isFetching]);
-
-  return null;
-}
 
 function RootLayout() {
   return (
     <>
-      <SeedInitializer />
       <Toaster position="top-right" />
       <Outlet />
     </>

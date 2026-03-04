@@ -44,7 +44,7 @@ export default function Header() {
             aria-label="Charolia Architects — Home"
           >
             <img
-              src="/assets/uploads/Screenshot_20260305-010019-1.png"
+              src="/assets/Screenshot_20260305-010019-1.png"
               alt="Charolia Architects Logo"
               className="h-10 w-10 lg:h-12 lg:w-12 object-contain rounded-full bg-white shadow-sm"
             />

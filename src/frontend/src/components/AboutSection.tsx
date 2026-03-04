@@ -34,12 +34,12 @@ export default function AboutSection() {
           >
             <div className="grid grid-cols-2 gap-3">
               <img
-                src="/assets/uploads/Screenshot_20260305-005912-2.png"
+                src="/assets/Screenshot_20260305-005912.png"
                 alt="Living Room Design by Charolia Architects"
                 className="w-full h-64 object-cover rounded-sm shadow-card"
               />
               <img
-                src="/assets/uploads/Screenshot_20260305-010001-7.png"
+                src="/assets/Screenshot_20260305-010001.png"
                 alt="Luxury Lobby by Charolia Architects"
                 className="w-full h-64 object-cover rounded-sm shadow-card mt-8"
               />

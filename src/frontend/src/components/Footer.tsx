@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
               <img
-                src="/assets/uploads/Screenshot_20260305-010019-1.png"
+                src="/assets/Screenshot_20260305-010019-1.png"
                 alt="Charolia Architects"
                 className="h-12 w-12 object-contain rounded-full bg-white/10"
               />

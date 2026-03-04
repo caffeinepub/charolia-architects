@@ -12,7 +12,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/assets/uploads/Screenshot_20260305-005941-8.png"
+          src="/assets/Screenshot_20260305-005941.png"
           alt="Charolia Architects Portfolio — Restaurant Design"
           className="w-full h-full object-cover"
           loading="eager"

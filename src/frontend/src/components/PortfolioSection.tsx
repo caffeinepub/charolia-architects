@@ -13,6 +13,73 @@ const CATEGORIES = [
   "Landscape",
 ];
 
+// Static fallback portfolio using the uploaded project images
+const STATIC_PORTFOLIO: PortfolioItem[] = [
+  {
+    id: BigInt(1),
+    title: "Luxury Living Room",
+    category: "Interiors",
+    imageUrl: "/assets/Screenshot_20260305-005912.png",
+    caption: "Warm beige & gold tones with bespoke furnishings",
+    displayOrder: BigInt(1),
+    createdAt: BigInt(0),
+  },
+  {
+    id: BigInt(2),
+    title: "Hotel Bedroom Suite",
+    category: "Interiors",
+    imageUrl: "/assets/Screenshot_20260305-005904.png",
+    caption: "Natural wood tones, premium finishes",
+    displayOrder: BigInt(2),
+    createdAt: BigInt(0),
+  },
+  {
+    id: BigInt(3),
+    title: "Elegant Living Space",
+    category: "Residential",
+    imageUrl: "/assets/Screenshot_20260305-005919.png",
+    caption: "Cream and brown palette, refined luxury",
+    displayOrder: BigInt(3),
+    createdAt: BigInt(0),
+  },
+  {
+    id: BigInt(4),
+    title: "Modern Exterior",
+    category: "Architectural Design",
+    imageUrl: "/assets/Screenshot_20260305-005928.png",
+    caption: "Night render — contemporary facade design",
+    displayOrder: BigInt(4),
+    createdAt: BigInt(0),
+  },
+  {
+    id: BigInt(5),
+    title: "High-Rise Tower",
+    category: "Architectural Design",
+    imageUrl: "/assets/Screenshot_20260305-005853.png",
+    caption: "Tall residential tower, Mumbai skyline",
+    displayOrder: BigInt(5),
+    createdAt: BigInt(0),
+  },
+  {
+    id: BigInt(6),
+    title: "Grand Lobby",
+    category: "Commercial",
+    imageUrl: "/assets/Screenshot_20260305-010001.png",
+    caption: "Gold & marble lobby, premium hospitality",
+    displayOrder: BigInt(6),
+    createdAt: BigInt(0),
+  },
+  {
+    id: BigInt(7),
+    title: "Restaurant & Cafe",
+    category: "Commercial",
+    imageUrl: "/assets/Screenshot_20260305-005941.png",
+    caption: "Pendant ceiling lights, intimate dining atmosphere",
+    displayOrder: BigInt(7),
+    createdAt: BigInt(0),
+  },
+];
+
 function SkeletonCard() {
   return (
     <div
@@ -29,9 +96,12 @@ function SkeletonCard() {
 }
 
 export default function PortfolioSection() {
-  const { data: items = [], isLoading } = useGetPortfolioItems();
+  const { data: backendItems = [], isLoading } = useGetPortfolioItems();
   const [activeCategory, setActiveCategory] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  // Use backend items if any exist, otherwise fall back to static portfolio images
+  const items = backendItems.length > 0 ? backendItems : STATIC_PORTFOLIO;
 
   const sorted = [...items].sort(
     (a, b) => Number(a.displayOrder) - Number(b.displayOrder),

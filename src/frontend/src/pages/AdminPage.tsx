@@ -22,7 +22,7 @@ function AdminLoginScreen() {
           <Lock className="h-7 w-7 text-brand-gold" />
         </div>
         <img
-          src="/assets/uploads/Screenshot_20260305-010019-1.png"
+          src="/assets/Screenshot_20260305-010019-1.png"
           alt="Charolia Architects"
           className="h-12 w-12 object-contain rounded-full mx-auto mb-4"
         />
@@ -119,7 +119,7 @@ function AdminDashboard() {
       <header className="bg-brand-charcoal text-white px-4 sm:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
-            src="/assets/uploads/Screenshot_20260305-010019-1.png"
+            src="/assets/Screenshot_20260305-010019-1.png"
             alt="Logo"
             className="h-8 w-8 object-contain rounded-full bg-white/10"
           />
